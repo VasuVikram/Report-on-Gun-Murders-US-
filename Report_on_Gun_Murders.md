@@ -3,7 +3,7 @@ Report on Gun Murders (US)
 Vasu Vikram
 July 10, 2018
 
-In this report we will analyse Gun Murders in United States as reported by the latest data of FBI. We will download data from the URL mentioned below: "<https://raw.githubusercontent.com/rafalab/dslabs/master/inst/extdata/murders.csv>" We will then wrangle data ang would make certain changes that would help us plot state=wise murder rates in the United States.
+In this report we will analyse Gun Murders in United States as reported by the latest data of FBI. We will download data from the URL mentioned below: "<https://raw.githubusercontent.com/rafalab/dslabs/master/inst/extdata/murders.csv>" We will then wrangle data and would make necessary modifications that would help us plot state-wise murder rates in the United States.
 
 ``` r
 url<-"https://raw.githubusercontent.com/rafalab/dslabs/master/inst/extdata/murders.csv"
