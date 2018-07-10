@@ -31,6 +31,8 @@ murders%>%mutate(abb=reorder(abb,rate))%>%
   coord_flip()
 ```
 
-![](Report_on_Gun_Murders_files/figure-markdown_github/unnamed-chunk-3-1.png) In the plot above, we have shown state-wise variability in Gun Murders in the United States. The states are represented as abbreviations of states on the vertical axis. The horzontal axis represents the rate, where the Gun Murders' rate is given by the following formula: rate=total/population\*10^5
+![](Report-on-Gun-Murders-US-/Report_on_Gun_Murders_files/figure-markdown_github/
+unnamed-chunk-3-1.png)
+In the plot above, we have shown state-wise variability in Gun Murders in the United States. The states are represented as abbreviations of states on the vertical axis. The horzontal axis represents the rate, where the Gun Murders' rate is given by the following formula: rate=total/population\*10^5
 
 From the plot, we can notice that Washington DC has an exceptionally high rate of Gun Murders, about 6 times the mean.
