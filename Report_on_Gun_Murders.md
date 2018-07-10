@@ -14,42 +14,14 @@ download.file(url, destfile = dest_file)
 Wrangling Data
 --------------
 
-You can also embed plots, for example:
-
-    ## Warning: package 'tidyverse' was built under R version 3.5.1
-
-    ## -- Attaching packages --------------------------------------- tidyverse 1.2.1 --
-
-    ## v ggplot2 3.0.0     v purrr   0.2.5
-    ## v tibble  1.4.2     v dplyr   0.7.6
-    ## v tidyr   0.8.1     v stringr 1.3.1
-    ## v readr   1.1.1     v forcats 0.3.0
-
-    ## Warning: package 'ggplot2' was built under R version 3.5.1
-
-    ## Warning: package 'tidyr' was built under R version 3.5.1
-
-    ## Warning: package 'purrr' was built under R version 3.5.1
-
-    ## Warning: package 'dplyr' was built under R version 3.5.1
-
-    ## Warning: package 'stringr' was built under R version 3.5.1
-
-    ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-    ## x dplyr::filter() masks stats::filter()
-    ## x dplyr::lag()    masks stats::lag()
-
-    ## Parsed with column specification:
-    ## cols(
-    ##   state = col_character(),
-    ##   abb = col_character(),
-    ##   region = col_character(),
-    ##   population = col_integer(),
-    ##   total = col_integer()
-    ## )
-
-    ## Warning: package 'bindrcpp' was built under R version 3.5.1
+``` r
+library(tidyverse)
+murders<-read_csv("data/murders.csv")
+murders<-murders%>%mutate(region=factor(region), rate=total/population*10^5)
+```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-![](Report_on_Gun_Murders_files/figure-markdown_github/unnamed-chunk-3-1.png) We can see that Washington DC has an exceptionally high rate of Gun Murders, about 6 times the mean.
+![](Report_on_Gun_Murders_files/figure-markdown_github/unnamed-chunk-3-1.png) In the plot above, we have shown state-wise variability in Gun Murders in the United States. The states are represented as abbreviations of states on the vertical axis. The horzontal axis represents the rate, where the Gun Murders' rate is given by the following formula: rate=total/population\*10^5
+
+From the plot, we can notice that Washington DC has an exceptionally high rate of Gun Murders, about 6 times the mean.
